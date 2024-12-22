@@ -1,3 +1,21 @@
 {
-  "extends": "@react-native/typescript-config/tsconfig.json"
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"], 
+      "@assets/*": ["assets/*"], 
+      "@screens/*": ["screens/*"], 
+      "@constants/*": ["constants/*"], 
+      "@theme": ["Theme"], 
+      "@utils/*": ["Utils/*"], 
+      "@types/*": ["Types/*"] 
+    },
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "build"]
 }
